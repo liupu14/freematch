@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import streamlit.components.v1 as components
-plt.rcParams["font.sans-serif"] = ["SimHei"]
+# plt.rcParams["font.sans-serif"] = ["SimHei"]
 
 st.set_page_config(layout="wide")
 st.title('温度变化曲线对比')
@@ -33,9 +33,9 @@ def gen_chart(no, sn):
     data2 = demo_data["Ieco"].values
     fig, ax = plt.subplots(figsize=(13, 5))
     xdata, ydata1, ydata2 = [], [], []
-    ln1, = plt.plot([], [], 'ro', label="传统制冷")
+    ln1, = plt.plot([], [], 'ro', label="norm cooling")
     le1 = plt.legend(loc=1)
-    ln2, = plt.plot([], [], 'g*', label="智能制冷")
+    ln2, = plt.plot([], [], 'g*', label="AI cooling")
     le2 = plt.legend(loc=1)
 
     def init():
